@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 from datetime import datetime,timezone,timedelta
-from .general import get_js_datetime_now()
+from general import get_js_datetime_now
 import time
 import os
 
@@ -10,8 +10,8 @@ import os
 
 def scraping_chart_data():
     nations = [
-    "eurjpy","usdjpy","eurusd","gdpjpy","cadjpy",
-    "chfjpy","gdpusd","usdchf","sekjpy","nokjpy",
+    "eurjpy","usdjpy","eurusd","cadjpy",
+    "chfjpy","usdchf","sekjpy","nokjpy",
     "tryjpy","zarjpy","mxnjpy","audjpy","nzdjpy",
     "audusd","nzdusd","euraud","cnhjpy","hkdjpy"]
     
@@ -23,7 +23,7 @@ def scraping_chart_data():
         payloads = {
             "pair": nation,
         "type": "1",
-        "count": "500",
+        "count": "400",
         "bid": "true",
         "ask": "true",
         "_": get_js_datetime_now()
