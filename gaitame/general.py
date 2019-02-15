@@ -1,4 +1,5 @@
 from datetime import datetime,timezone,timedelta
+
 def get_js_datetime_now(milliseconds=1,microseconds=0,adjust=True):
     """
     JSベースの現在時刻を取得

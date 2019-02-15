@@ -18,7 +18,8 @@ def scraping_chart_data():
     DATA_DIR = "chart_data_gaitame"
     url = "https://navi.gaitame.com/v2/info/prices/chart"
     df_base = False
-    now = datetime.now().strftime("%Y%m%d_%H%M")
+    JST = timezone(timedelta(hours=+9),'JST')
+    now = datetime.now(JST).strftime("%Y%m%d_%H%M")
     for nation in nations:
         payloads = {
             "pair": nation,

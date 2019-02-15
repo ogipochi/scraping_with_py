@@ -12,7 +12,8 @@ def scraping_buysell():
 
     url = "https://navi.gaitame.com/v2/info/tools/buysell"
     DATA_DIR = "buysell_gaitame"
-    now = datetime.now().strftime("%Y%m%d_%H%M")
+    JST = timezone(timedelta(hours=+9),'JST')
+    now = datetime.now(JST).strftime("%Y%m%d_%H%M")
     nations = [
     "eurjpy","usdjpy","eurusd","cadjpy",
     "chfjpy","usdchf","sekjpy","nokjpy",
