@@ -53,7 +53,6 @@ def scraping_chart_data():
         
         time.sleep(3)
     print("ended chart data")
-    return token
 def scraping_buysell():
     """
     売買比率を確認
@@ -95,10 +94,5 @@ def scraping_buysell():
         df.to_csv(os.path.join(DATA_DIR,nation,"{}.csv".format(now)))
         time.sleep(3)
     print("ended buysell")
-
-while True:
-    scraping_buysell()
-    token = scraping_chart_data()
-    time.sleep(60*60*6)
-    token = scraping_chart_data() 
-    time.sleep(60*60*6)
+def sample_print():
+    print("hello")
